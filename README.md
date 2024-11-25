@@ -3,7 +3,7 @@
 - [Official Zabbix Dockerfiles](https://github.com/zabbix/zabbix-docker)
 - [Zabbix plugin for Grafana dashboard](https://github.com/grafana/grafana-zabbix)
 
-![scheme](./.images/scheme.excalidraw.png)
+![scheme](./images/scheme.excalidraw.png)
 
 For those who are used to using zabbix to collect metrics, but want to start drawing dashboards more beautifully
 
@@ -39,7 +39,7 @@ default user password
 
 
 **Zabbix server** - Host / change use connect from DNS `zabbix-agent`
-![zabbix-agent](./.images/zabbix-agent-settings.png)
+![zabbix-agent](./images/zabbix-agent-settings.png)
 
 ### Grafana `localhost:3000` 
 
@@ -50,7 +50,7 @@ default user password (change `grafana/grafana.ini` auth.anonymous enabled)
 Test data source
 
 `Grafana -> Connections -> Data sources -> zabbix -> Test`
-![zabbix-agent](./.images/data-source-test.png)
+![zabbix-agent](./images/data-source-test.png)
 
 ### Debug
 ```
