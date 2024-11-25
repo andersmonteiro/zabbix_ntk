@@ -1,58 +1,58 @@
-# docker compose - Zabbix NGINX PostgreSQL + Grafana
+//Docker Compose - Zabbix NGINX PostgreSQL + Grafana
 
-- [Official Zabbix Dockerfiles](https://github.com/zabbix/zabbix-docker)
-- [Zabbix plugin for Grafana dashboard](https://github.com/grafana/grafana-zabbix)
+- [Dockerfiles Oficiais do Zabbix](https://github.com/zabbix/zabbix-docker)
+- [Plugin do Zabbix para painéis do Grafana](https://github.com/grafana/grafana-zabbix)
 
-![scheme](./images/scheme.excalidraw.png)
+![esquema](./images/scheme.excalidraw.png)
 
-For those who are used to using zabbix to collect metrics, but want to start drawing dashboards more beautifully
+Para aqueles que estão acostumados a usar o Zabbix para coletar métricas, mas querem começar a desenhar painéis mais bonitos.
 
-Example simple docker-compose service
+Exemplo de serviço docker-compose simples:
 
-- **Postgresql:**                16.2
-- **Zabbix Server:**             7.0.3
-- **Zabbix Frontend NGINX:**     7.0.3
-- **Zabbix Agent:**              7.0.3
-- **Grafana:**                   11.2.0
+- **PostgreSQL:**                16.2
+- **Zabbix Server:**             7.0.3
+- **Zabbix Frontend NGINX:**     7.0.3
+- **Zabbix Agent:**              7.0.3
+- **Grafana:**                   11.2.0
 
-## Guide
+//Guia
 
-### Clone repo:
+//Clone o repositório:
 ```
 git clone https://github.com/akmalovaa/zabbix-docker.git
 cd zabbix-docker
 ```
 
-### Check or change settings in the `.env` file
+//Verifique ou altere as configurações no arquivo `.env`
 
-### Run docker-compose:
+//Execute o docker-compose:
 ```
 docker-compose up -d
 ```
 
-The first launch takes 1-2 minutes
+A primeira inicialização leva de 1 a 2 minutos.
 
-### Zabbix `localhost:8080`
-default user password 
+//Zabbix `localhost:8080`
+Senha de usuário padrão 
 - **login:** Admin
-- **password:** zabbix
+- **senha:** zabbix
 
 
-**Zabbix server** - Host / change use connect from DNS `zabbix-agent`
+**Zabbix server** - Host / altere o uso da conexão do DNS `zabbix-agent`
 ![zabbix-agent](./images/zabbix-agent-settings.png)
 
-### Grafana `localhost:3000` 
+//Grafana `localhost:3000` 
 
-default user password (change `grafana/grafana.ini` auth.anonymous enabled)
+Senha de usuário padrão (altere `grafana/grafana.ini` auth.anonymous enabled)
 - **login:** admin
-- **password:** 12345
+- **senha:** 12345
 
-Test data source
+Teste a fonte de dados
 
-`Grafana -> Connections -> Data sources -> zabbix -> Test`
+`Grafana -> Conexões -> Fontes de dados -> zabbix -> Testar`
 ![zabbix-agent](./images/data-source-test.png)
 
-### Debug
+//Depuração
 ```
 docker-compose logs --tail=1 -f
 ```
