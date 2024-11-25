@@ -5,9 +5,9 @@
 
 ![esquema](./images/scheme.excalidraw.png)
 
-Para aqueles que estão acostumados a usar o Zabbix para coletar métricas, mas querem começar a desenhar painéis mais bonitos.
 
-Exemplo de serviço docker-compose simples:
+
+Dados de versão:
 
 - **PostgreSQL:**                16.2
 - **Zabbix Server:**             7.0.3
