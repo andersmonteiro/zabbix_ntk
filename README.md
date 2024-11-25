@@ -19,7 +19,7 @@ Exemplo de serviço docker-compose simples:
 
 ## Clone o repositório:
 ```
-git clone https://github.com/akmalovaa/zabbix-docker.git
+git clone https://github.com/andersmonteiro/zabbix-docker.git
 cd zabbix-docker
 ```
 
