@@ -15,24 +15,24 @@ Exemplo de serviço docker-compose simples:
 - **Zabbix Agent:**              7.0.3
 - **Grafana:**                   11.2.0
 
-//Guia
+##Guia
 
-//Clone o repositório:
+##Clone o repositório:
 ```
 git clone https://github.com/akmalovaa/zabbix-docker.git
 cd zabbix-docker
 ```
 
-//Verifique ou altere as configurações no arquivo `.env`
+##Verifique ou altere as configurações no arquivo `.env`
 
-//Execute o docker-compose:
+##Execute o docker-compose:
 ```
 docker-compose up -d
 ```
 
 A primeira inicialização leva de 1 a 2 minutos.
 
-//Zabbix `localhost:8080`
+##Zabbix `localhost:8080`
 Senha de usuário padrão 
 - **login:** Admin
 - **senha:** zabbix
@@ -41,7 +41,7 @@ Senha de usuário padrão 
 **Zabbix server** - Host / altere o uso da conexão do DNS `zabbix-agent`
 ![zabbix-agent](./images/zabbix-agent-settings.png)
 
-//Grafana `localhost:3000` 
+##Grafana `localhost:3000` 
 
 Senha de usuário padrão (altere `grafana/grafana.ini` auth.anonymous enabled)
 - **login:** admin
@@ -52,7 +52,7 @@ Teste a fonte de dados
 `Grafana -> Conexões -> Fontes de dados -> zabbix -> Testar`
 ![zabbix-agent](./images/data-source-test.png)
 
-//Depuração
+##Depuração
 ```
 docker-compose logs --tail=1 -f
 ```
